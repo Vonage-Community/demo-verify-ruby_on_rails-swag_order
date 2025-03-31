@@ -1,0 +1,8 @@
+<h1>New Swag Order</h1>
+<p>Order some awesome Vonage Swag!</p>
+<img src="/img/Voyagers_Meet-the-Voyagers.png" alt="Vonage Voyagers: Meet the Voyagers">
+<%= form_with model: @order do |form| %>
+  <%= form.label :name, "Product Name" %>
+  <%= form.text_field :product_name, value: "Vonage Swag", readonly: true %>
+  <%= form.submit 'Create Order' %>
+<% end %>
