@@ -44,6 +44,9 @@
       <%= yield %>
     </main>
     <footer>
+      <% if authenticated? %>
+        <%= button_to "Sign Out", session_path, method: :delete  %></li>
+      <% end %>
     </footer>
   </body>
 </html>
