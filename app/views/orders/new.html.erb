@@ -6,6 +6,14 @@
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
 <%= form_with model: @order do |form| %>
   <%= form.label :name, "Product Name" %>
-  <%= form.text_field :product_name, value: "Vonage Swag", readonly: true %>
+  <%= form.select :product_name, options_for_select([
+    ['T-Shirt + Ruby Sticker', 'Vonage t-shirt and Ruby Sticker'],
+    ['Notebook + Ruby Sticker', 'Vonage Notebook and Ruby Sticker'],
+    ['Pencil + Ruby Sticker', 'Vonage Pencil and Ruby Sticker'],
+    ['Pen + Ruby Sticker', 'Vonage Pen and Ruby Sticker'],
+    ['Toothbrush + Ruby Sticker', 'Vonage Toothbrush and Ruby Sticker'],
+    ['Multi-charge Cable + Ruby Sticker', 'Vonage Multi-charge Cable and Ruby Sticker'],
+    ['Keyring + Ruby Sticker', 'Vonage Keyring and Ruby Sticker']
+  ]) %>
   <%= form.submit 'Create Order' %>
 <% end %>
