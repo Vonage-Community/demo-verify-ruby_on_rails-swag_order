@@ -1,19 +1,20 @@
-<h1>Create your Swag Order</h1>
+<h1>Create your Swag Order / ノベルティーを注文</h1>
 <p>Order some awesome Vonage Swag!</p>
+<p>Vonage の素敵なノベルティーを注文しましょう！</p>
 <img src="/img/Voyagers_Andi.png" alt="Vonage Voyagers: Andi">
 
 <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
 <%= form_with model: @order do |form| %>
-  <%= form.label :name, "Product Name" %>
+  <%= form.label :name, "Product Name / 商品名" %>
   <%= form.select :product_name, options_for_select([
-    ['T-Shirt + Ruby Sticker', 'Vonage t-shirt and Ruby Sticker'],
-    ['Notebook + Ruby Sticker', 'Vonage Notebook and Ruby Sticker'],
-    ['Pencil + Ruby Sticker', 'Vonage Pencil and Ruby Sticker'],
-    ['Pen + Ruby Sticker', 'Vonage Pen and Ruby Sticker'],
-    ['Toothbrush + Ruby Sticker', 'Vonage Toothbrush and Ruby Sticker'],
-    ['Multi-charge Cable + Ruby Sticker', 'Vonage Multi-charge Cable and Ruby Sticker'],
-    ['Keyring + Ruby Sticker', 'Vonage Keyring and Ruby Sticker']
+    ['T-Shirt + Ruby Sticker / Tシャツ + Rubyステッカー', 'Vonage Tシャツ & Ruby ステッカー'],
+    ['Notebook + Ruby Sticker / ノート + Ruby ステッカー', 'Vonage Notebook and Ruby Sticker / Vonage ノート & Ruby ステッカー'],
+    ['Pencil + Ruby Sticker / 鉛筆 + Rubyステッカー', 'Vonage Pencil and Ruby Sticker / Vonage 鉛筆 & Ruby ステッカー'],
+    ['Pen + Ruby Sticker / ペン + Rubyステッカー', 'Vonage Pen and Ruby Sticker / Vonage ペン & Ruby ステッカー'],
+    ['Toothbrush + Ruby Sticker / 歯ブラシ + Rubyステッカー', 'Vonage Toothbrush and Ruby Sticker / Vonage 歯ブラシ & Ruby ステッカー'],
+    ['Multi-charge Cable + Ruby Sticker / マルチ充電ケーブル + Rubyステッカー', 'Vonage Multi-charge Cable and Ruby Sticker / Vonage マルチ充電ケーブル & Ruby ステッカー'],
+    ['Keyring + Ruby Sticker / キーホルダー + Rubyステッカー', 'Vonage Keyring and Ruby Sticker / Vonage キーホルダー & Ruby ステッカー']
   ]) %>
-  <%= form.submit 'Create Order' %>
+  <%= form.submit 'Create Order / 注文を作成' %>
 <% end %>

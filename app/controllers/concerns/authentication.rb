@@ -33,7 +33,7 @@ module Authentication
 
     def request_authentication
       session[:return_to_after_authenticating] = request.url
-      redirect_to new_session_path, :alert => "You must be logged in to perform this action."
+      redirect_to new_session_path, :alert => "You must be logged in to perform this action / この操作を行うにはログインが必要です。"
     end
 
     def after_authentication_url
