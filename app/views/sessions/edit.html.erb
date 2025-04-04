@@ -3,8 +3,9 @@
 <h2>OTP</h2>
 <%= form_with url: session_path, method: :patch do |form| %>
   <%= form.text_field :otp, required: true, placeholder: "Enter your one-time password", maxlength: 72 %><br>
-  <%= form.submit "Validate OTP" %>
+  <%= form.submit "Validate OTP / OTPを検証する" %>
 <% end %>
 <br>
 <p>Your OTP might take a few minutes to arrive. If you have not received it after three minutes, please request a new OTP using the button below.</p>
+<p>OTP が届くまで数分かかる場合があります。3 分経っても届かない場合は、下のボタンを使用して新しい OTP をリクエストしてください。</p>
 <%= button_to "Request new OTP", request_new_otp_session_path %>
