@@ -63,3 +63,7 @@ group :test do
 end
 
 gem "pry", "~> 0.15.2"
+
+gem "vonage_rails", "~> 1.2"
+
+gem "dotenv-rails", "~> 3.1"
