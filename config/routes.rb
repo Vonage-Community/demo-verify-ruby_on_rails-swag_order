@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resource :session
+  resource :session do
+    post 'request_new_otp', on: :collection
+  end
   resources :passwords, param: :token
   resources :orders, only: [:show, :new, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
